@@ -9,9 +9,9 @@ node {
 		build 'Packer Builder'
 	}
     stage("Build Instance"){
-		build 'EC2Deployer'
+		build 'EC2Deployer2'
 	}
 	stage("Send Notification"){
-			echo "Hello"
+		echo "Hello"
     }
 }
