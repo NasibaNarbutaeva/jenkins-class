@@ -22,7 +22,7 @@
 resource "aws_instance" "web" {
   ami           = "ami-04145c8c86d2474c0"
   instance_type = "t3.micro"
-  subnet_id = data.aws_subnet.selected.id
+  subnet_id = "subnet-058ee88220587483f"
 
   tags = {
     Name = "Terraform"
@@ -31,12 +31,12 @@ resource "aws_instance" "web" {
 
 // output "ami" {
 //   value = data.aws_ami.example.id
-// }
+// // }
 
-data "aws_subnet" "selected" {
-  availability_zone = "us-east-1a"
-  filter {
-    name   = "tag:Name"
-    values = ["DEV_Project"]
-  }
-}
+// data "aws_subnet" "selected" {
+//   availability_zone = "us-east-1a"
+//   filter {
+//     name   = "tag:Name"
+//     values = ["DEV_Project"]
+//   }
+// }
